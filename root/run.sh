@@ -20,6 +20,6 @@ chown -R ${user}:${group} /config
 [ -n "${WEBROOT}" ] && DAEMON_OPTS="${DAEMON_OPTS} --webroot=$WEBROOT"
 
 # Run Maraschino in foreground
-runcmd="cd /opt/maraschino && eval python2 Maraschino.py --datadir=/config --database=/config/maraschino.db ${DAEMON_OPTS}"
+runcmd="cd /opt/maraschino && python2 Maraschino.py --datadir=/config --database=/config/maraschino.db ${DAEMON_OPTS}"
 eval su -c "$runcmd" - ${user} 
 
