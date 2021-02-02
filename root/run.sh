@@ -21,5 +21,5 @@ chown -R ${user}:${group} /config
 
 # Run Maraschino in foreground
 runcmd="cd /opt/maraschino && python2 Maraschino.py --datadir=/config --database=/config/maraschino.db ${DAEMON_OPTS}"
-eval su -c "$runcmd" - ${user} 
+su -c "$runcmd" - ${user} 
 
