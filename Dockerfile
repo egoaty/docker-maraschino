@@ -6,7 +6,7 @@ ARG GITHUB_CLONE_URL="https://github.com/mrkipling/maraschino.git"
 ARG APP_ROOT="/opt/maraschino"
 
 RUN \
-  apk add --no-cache curl jq python2 && \
+  apk add --no-cache tzdata curl jq python2 && \
   apk add --no-cache git && \
   mkdir -p "$APP_ROOT" && \
   git clone "${GITHUB_CLONE_URL}" "${APP_ROOT}" && \
